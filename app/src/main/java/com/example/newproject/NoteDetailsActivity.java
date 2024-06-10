@@ -2,6 +2,7 @@ package com.example.newproject;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -20,7 +21,7 @@ import com.google.firebase.firestore.DocumentReference;
 
 public class NoteDetailsActivity extends AppCompatActivity {
     EditText titleEditText,contentEditText;
-    ImageButton saveNoteBtn;
+    Button saveNoteBtn;
     TextView pageTitleTextView;
     String title,content,docId;
     boolean isEditMode = false;

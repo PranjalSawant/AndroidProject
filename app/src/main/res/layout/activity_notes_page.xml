@@ -15,23 +15,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/page_title"
-            android:text="Notepad"
+            android:text="Student Companion"
             android:layout_margin="10dp"
             android:textSize="32sp"
             android:textColor="@color/custom_db"
             android:textStyle="bold"/>
 
         <ImageButton
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_margin="10dp"
             android:id="@+id/menu_btn"
-            android:src="@drawable/outline_apps_24"
+            android:layout_width="62dp"
+            android:layout_height="32dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            app:tint="@color/custom_db"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            />
+            android:src="@drawable/menu_meatballs_svgrepo_com"
+            app:tint="@color/custom_db" />
 
     </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView

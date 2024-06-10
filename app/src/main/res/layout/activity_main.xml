@@ -14,7 +14,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Notepad"
+        android:text="Student Companion"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/custom_db"
@@ -27,6 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Email"
+        android:textColorHint="@color/black"
         android:textColor="@color/custom_db"
         android:inputType="textEmailAddress"
         android:layout_marginBottom="16dp" />
@@ -36,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Password"
+        android:textColorHint="@color/black"
         android:textColor="@color/custom_db"
         android:inputType="textPassword"
         android:layout_marginBottom="32dp" />

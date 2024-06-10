@@ -1,6 +1,7 @@
 package com.example.newproject;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageButton;
@@ -44,15 +45,29 @@ NoteAdapter noteAdapter;
     }
     void showMenu(){
         PopupMenu popupMenu  = new PopupMenu(NotesPage.this,menuBtn);
+        popupMenu.getMenu().add("Campus Map");
+        popupMenu.getMenu().add("Calculate Your Marks");
         popupMenu.getMenu().add("Logout");
         popupMenu.show();
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
-                if(menuItem.getTitle()=="Logout"){
+                String title = menuItem.getTitle().toString();
+                if (title.equals("Logout")) {
                     FirebaseAuth.getInstance().signOut();
-                    startActivity(new Intent(NotesPage.this,LoginPage.class));
+                    startActivity(new Intent(NotesPage.this, LoginPage.class));
                     finish();
+                    return true;
+                } else if (title.equals("Campus Map")) {
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW);
+                    mapIntent.setData(Uri.parse("geo:0,0?q=KJSIM"));
+                    startActivity(mapIntent);
+
+                    return true;
+                }else if (title.equals("Calculate Your Marks")) {
+                    Intent calc = new Intent(NotesPage.this, Calculator.class);
+                    startActivity(calc);
+
                     return true;
                 }
                 return false;

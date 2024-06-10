@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/custom_lb"
+    tools:context=".Calculator">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_bar_layout"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Student Companion"
+            android:textColor="@color/custom_db"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/menu_btn"
+            android:layout_width="62dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/menu_meatballs_svgrepo_com"
+            app:tint="@color/custom_db" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_below="@id/title_bar_layout">
+
+        <EditText
+            android:id="@+id/num1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter a number"
+            android:textColorHint="@color/black"
+
+            android:inputType="number"
+            android:textColor="@color/custom_db"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/num2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter another number"
+            android:textColorHint="@color/black"
+
+            android:inputType="number"
+            android:textColor="@color/custom_db"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Result"
+            android:textColorHint="@color/black"
+
+            android:inputType="number"
+            android:focusable="false"
+            android:textColor="@color/custom_db"
+            android:layout_marginBottom="32dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/add_button"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/custom_db"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/sub_button"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/custom_db"
+                android:text="-" />
+
+            <Button
+                android:id="@+id/mul_button"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/custom_db"
+                android:text="*" />
+
+            <Button
+                android:id="@+id/div_button"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/custom_db"
+                android:text="/" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
